@@ -1,0 +1,161 @@
+header {
+  position: relative;
+  margin: 0 auto; /* added */
+  padding: 0;
+  width: 300px;
+  /* border: 2px solid black; */
+  height: auto;
+  margin-bottom: 1vh;
+}
+
+#bar {
+  position: inherit;
+  overflow: auto;
+  height: auto;
+  /* border: 1px solid red; */
+}
+
+h1 {
+  text-align: center;
+  color: #222222;
+  font-family: "Ubuntu";
+  margin: 10px 0px;
+  /* border: 1px solid red; */
+}
+
+#restart-btn {
+  cursor: pointer;
+  float: left;
+  border-radius: 2.2px;
+  border-width: 0.14vh;
+  padding: 2.5px 6px;
+}
+
+#scoreboard {
+  background-image: linear-gradient(to bottom, #e4e4e4, #f7f7f7);
+  border-radius: 2.2px;
+  border: 0.14vh solid black;
+  padding: 2.5px 6px;
+  font: -webkit-small-control;
+  color: initial;
+  vertical-align: -0.3px;
+  float: right;
+  cursor: pointer;
+}
+
+body {
+  background: #bababa;
+  color: rgb(48, 48, 48);
+  zoom: 1.75;
+  margin: 0; /* added */
+  padding: 0;
+}
+
+.content {
+  width: 310px;
+  height: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+canvas {
+  background: rgb(44, 44, 44);
+  border-radius: 0.75vh;
+  border: 0.6vh solid white;
+  cursor: pointer;
+}
+
+#gameover-modal {
+  zoom: 0.8;
+  margin-left: -45px;
+  font-family: "Ubuntu";
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  width: 60vh;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 4px;
+  padding: 0px 8px;
+  top: 23%;
+  height: auto;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+h2 {
+  margin: 10px 1.5vh;
+  font-size: 3.3vh;
+  text-align: left;
+}
+
+.modalTextBox {
+  position: inherit;
+  line-height: 3.5vh;
+  padding-left: 8px;
+  font-size: 1.8vh;
+  border: 1px solid black;
+  width: 68%;
+  border-radius: 3px;
+  outline: none;
+  margin: 0.2vh;
+  margin-left: 1vh;
+}
+
+#final-score {
+  display: inline-flex;
+  margin-left: 1.2vh;
+  color: initial;
+  font-size: 2.4vh;
+  font-weight: 400;
+}
+
+#editBtn {
+  font-family: "Ubuntu";
+  position: relative;
+  border: 0.26vh solid rgba(9, 25, 44);
+  border-radius: 0.5vh;
+  background-color: rgb(230, 230, 0);
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.5vh;
+  margin-right: 1.5vh;
+  font-size: 1.7vh;
+  font-weight: 700;
+  height: 4.5vh;
+  width: 8vh;
+}
+
+#submitBtn {
+  font-family: "Ubuntu";
+  position: relative;
+  border: 0.26vh solid rgba(9, 25, 44);
+  border-radius: 0.5vh;
+  background-color: orange;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.5vh;
+  font-size: 1.7vh;
+  font-weight: 700;
+  height: 4.5vh;
+  width: 8vh;
+}
+
+#modal-buttons {
+  float: right;
+  /* border: 1px solid black; */
+  margin-right: 0.8vh;
+  margin-bottom: 0.8vh;
+}
+
+#shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}

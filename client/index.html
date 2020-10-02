@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Snake 2</title>
+  </head>
+
+  <header>
+    <h1>Snake 2</h1>
+    <div id="bar">
+      <button id="restart-btn">Restart</button>
+      <!-- <span id="scoreboard">Score</span> -->
+    </div>
+  </header>
+
+  <body>
+    <div class="content">
+      <canvas class="canvas" height="300" width="300"></canvas>
+
+      <div
+        id="gameover-modal"
+        style="
+          opacity: 100%;
+          visibility: hidden;
+          transform: translateY(-100vh);
+          transition-timing-function: ease;
+          transition: transform 0.2s;
+        "
+      >
+        <h2>GAME OVER!</h2>
+        <hr />
+        <form id="name-form">
+          <input
+            type="text"
+            class="modalTextBox"
+            placeholder="Enter Player Name"
+            id="name-entry"
+            required
+          />
+          <span id="final-score"></span>
+          <hr />
+          <div id="modal-buttons">
+            <button id="editBtn">Cancel</button>
+
+            <button type="submit" id="submitBtn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="shadow"></div>
+    <script>
+      // const onSubmitForm = async (e) => {
+      //   e.preventDefault();
+      //   const nameEntry = document.getElementById("name-entry");
+      //  //   const nameEntry = document.getElementById("name-entry");
+      //   const body = nameEntry.value;
+
+      //   try {
+      //     const response = await fetch("http://localhost:5000/scores", {
+      //       method: "POST",
+      //       headers: { "Content-Type": "application/json" },
+      //       body: JSON.stringify(body),
+      //     });
+      //     alert(JSON.stringify(body));
+      //     console.log(response);
+      //   } catch (error) {
+      //     console.error(error.message);
+      //   }
+      // };
+      // document
+      //   .getElementById("name-form")
+      //   .addEventListener("submit", onSubmitForm);
+    </script>
+  </body>
+
+  <script type="text/javascript" src="fruit.js"></script>
+  <script type="text/javascript" src="snake.js"></script>
+  <script type="text/javascript" src="draw.js"></script>
+</html>

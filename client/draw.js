@@ -37,7 +37,7 @@ function cancelForm(e) {
 document.getElementById("editBtn").addEventListener("click", cancelForm);
 
 // modal submit button
-const onSubmitForm = (e) => {
+const onSubmitForm = async (e) => {
   e.preventDefault();
   const nameEntry = document.getElementById("name-entry");
 
@@ -47,7 +47,7 @@ const onSubmitForm = (e) => {
   };
 
   try {
-    const response = fetch("http://localhost:5000/scores", {
+    const response = await fetch("/scores", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),

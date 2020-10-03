@@ -54,7 +54,7 @@ const onSubmitForm = async (e) => {
     });
     closeModal();
     console.log(response);
-    // window.location = "/client/index.html";
+    window.location = "/";
   } catch (error) {
     console.error(error.message);
   }

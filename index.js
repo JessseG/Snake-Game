@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json()); // req.body
 
 // app.use(express.static(path.join(__dirname, "client/build")));
-app.use(express.static("client/build")); // same
+// app.use(express.static("client/build")); // same
 
 if (process.env.NODE_ENV === "production") {
   // server static content

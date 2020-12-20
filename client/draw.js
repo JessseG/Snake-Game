@@ -79,7 +79,7 @@ const handleScoreboard = async (e) => {
     players = jsonData;
     topScores.innerText = jsonData;
     // topScores.innerHTML();
-    let prevPlayer = document.getElementById("player-1");
+    let prevPlayer = document.getElementById("top-scores");
     for (let i = 0; i < jsonData.length; i++) {
       let newPlayer = document.createElement("span");
       newPlayer.setAttribute("class", "players");

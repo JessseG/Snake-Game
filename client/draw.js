@@ -68,27 +68,28 @@ document.getElementById("exit-Btn").addEventListener("click", function () {
 });
 const topScores = document.getElementById("top-scores");
 
-// modal submit button
-const handleScoreboard = async (e) => {
-  e.preventDefault();
-
-  try {
-    const response = await fetch("/scores");
-    const jsonData = await response.json();
-    console.log(jsonData);
-    players = jsonData;
-    // topScores.innerText = jsonData;
-    // topScores.innerHTML();
-    let prevPlayer = document.getElementById("top-scores");
-    for (let i = 0; i < jsonData.length; i++) {
-      let newPlayer = document.createElement("div");
-      newPlayer.setAttribute("class", "players");
-      newPlayer.innerHTML = `<span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player_score">${jsonData[i].player_score}</span><hr />`;
-      prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
-    }
-  } catch (err) {
-    console.error(err.message);
+try {
+  const response = await fetch("/scores");
+  const jsonData = await response.json();
+  console.log(jsonData);
+  players = jsonData;
+  // topScores.innerText = jsonData;
+  // topScores.innerHTML();
+  let prevPlayer = document.getElementById("top-scores");
+  for (let i = 0; i < jsonData.length; i++) {
+    let newPlayer = document.createElement("div");
+    newPlayer.setAttribute("class", "players");
+    newPlayer.innerHTML = `<span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player_score">${jsonData[i].player_score}</span><hr />`;
+    prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
   }
+} catch (err) {
+  console.error(err.message);
+}
+
+// modal submit button
+const handleScoreboard = () => {
+  // e.preventDefault();
+
   document.getElementById("shadow").style.background = "black";
   document.getElementById("shadow").style.opacity = 0.5;
   document.getElementById("shadow").style.zIndex = 1;

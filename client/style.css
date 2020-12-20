@@ -157,12 +157,12 @@ h2 {
 }
 
 #player-name {
-  margin: auto 4vh;
+  margin: auto 8vh;
   font-weight: bold;
 }
 
 #player-score {
-  margin: auto 4vh;
+  margin: auto 8vh;
   font-weight: bold;
 }
 

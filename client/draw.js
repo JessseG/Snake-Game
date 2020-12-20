@@ -68,23 +68,25 @@ document.getElementById("exit-Btn").addEventListener("click", function () {
 });
 const topScores = document.getElementById("top-scores");
 
-try {
-  const response = await fetch("/scores");
-  const jsonData = await response.json();
-  console.log(jsonData);
-  players = jsonData;
-  // topScores.innerText = jsonData;
-  // topScores.innerHTML();
-  let prevPlayer = document.getElementById("top-scores");
-  for (let i = 0; i < jsonData.length; i++) {
-    let newPlayer = document.createElement("div");
-    newPlayer.setAttribute("class", "players");
-    newPlayer.innerHTML = `<span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player_score">${jsonData[i].player_score}</span><hr />`;
-    prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
+(async function loadScoreboard() {
+  try {
+    const response = await fetch("/scores");
+    const jsonData = await response.json();
+    console.log(jsonData);
+    players = jsonData;
+    // topScores.innerText = jsonData;
+    // topScores.innerHTML();
+    let prevPlayer = document.getElementById("top-scores");
+    for (let i = 0; i < jsonData.length; i++) {
+      let newPlayer = document.createElement("div");
+      newPlayer.setAttribute("class", "players");
+      newPlayer.innerHTML = `<span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player_score">${jsonData[i].player_score}</span><hr />`;
+      prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
+    }
+  } catch (err) {
+    console.error(err.message);
   }
-} catch (err) {
-  console.error(err.message);
-}
+})();
 
 // modal submit button
 const handleScoreboard = () => {

@@ -79,7 +79,13 @@ const handleScoreboard = async (e) => {
     players = jsonData;
     topScores.innerText = jsonData;
     // topScores.innerHTML();
-    // prevItem.parentNode.insertBefore(newItem, prevItem.nextSibling); // insert after
+    let prevPlayer = document.getElementById("player-1");
+    for (let i = 0; i < jsonData.length; i++) {
+      let newPlayer = document.createElement("span");
+      newPlayer.setAttribute("class", "players");
+      newPlayer.innerHTML = `${jsonData[i].player_name}      ${jsonData[i].player_score}`;
+      prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
+    }
   } catch (err) {
     console.error(err.message);
   }

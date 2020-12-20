@@ -80,7 +80,7 @@ const topScores = document.getElementById("top-scores");
     for (let i = 0; i < jsonData.length; i++) {
       let newPlayer = document.createElement("div");
       newPlayer.setAttribute("class", "players");
-      newPlayer.innerHTML = `<span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span><hr />`;
+      newPlayer.innerHTML = `<hr /><span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span>`;
       prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
     }
   } catch (err) {

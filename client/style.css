@@ -158,14 +158,14 @@ h2 {
 
 #player-name {
   float: left;
-  margin-left: 4vh;
+  margin-left: 5vh;
   font-weight: bold;
 }
 
 #player-score {
   float: right;
-  margin-right: 4vh;
-  font-weight: bold;
+  margin-right: 5vh;
+  /* font-weight: bold; */
 }
 
 #exit-Btn {

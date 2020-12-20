@@ -31,7 +31,19 @@ h1 {
   padding: 2.5px 6px;
 }
 
-#scoreboard {
+#score {
+  background-image: linear-gradient(to bottom, #e4e4e4, #f7f7f7);
+  border-radius: 2.2px;
+  border: 0.14vh solid black;
+  padding: 2.5px 6px;
+  font: -webkit-small-control;
+  color: initial;
+  vertical-align: -0.3px;
+  float: right;
+  cursor: pointer;
+}
+
+#score {
   background-image: linear-gradient(to bottom, #e4e4e4, #f7f7f7);
   border-radius: 2.2px;
   border: 0.14vh solid black;
@@ -46,19 +58,18 @@ h1 {
 body {
   background: #bababa;
   color: rgb(48, 48, 48);
-  zoom: 1.75;
+  zoom: 1.6;
   margin: 0; /* added */
   padding: 0;
 }
 
 .content {
-  width: 310px;
-  height: 300px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  /* width: 310px; */
+  /* height: 300px; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 canvas {
@@ -66,9 +77,41 @@ canvas {
   border-radius: 0.75vh;
   border: 0.6vh solid white;
   cursor: pointer;
+  display: block;
+}
+
+#scoreboard {
+  font-family: "Ubuntu";
+  border: 0.2vh solid rgba(9, 25, 44);
+  border-radius: 0.4vh;
+  background-color: orange;
+  cursor: pointer;
+  margin: 2.3vh 0.5vh;
+  font-size: 1.7vh;
+  font-weight: 550;
+  height: 4.5vh;
+  width: 220px;
 }
 
 #gameover-modal {
+  zoom: 0.8;
+  margin-left: -45px;
+  font-family: "Ubuntu";
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  width: 60vh;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 4px;
+  padding: 0px 8px;
+  top: 23%;
+  height: auto;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+#scoreboard-modal {
   zoom: 0.8;
   margin-left: -45px;
   font-family: "Ubuntu";
@@ -113,7 +156,7 @@ h2 {
   font-weight: 400;
 }
 
-#editBtn {
+#exit-Btn {
   font-family: "Ubuntu";
   position: relative;
   border: 0.26vh solid rgba(9, 25, 44);
@@ -123,10 +166,11 @@ h2 {
   display: inline-block;
   margin: 0.5vh;
   margin-right: 1.5vh;
-  font-size: 1.7vh;
+  font-size: 1.8vh;
   font-weight: 700;
   height: 4.5vh;
-  width: 8vh;
+  width: 7vh;
+  /* padding: auto 1vh; */
 }
 
 #submitBtn {

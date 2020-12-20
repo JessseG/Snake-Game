@@ -1,6 +1,6 @@
 const canvas = document.querySelector(".canvas");
 const ctx = canvas.getContext("2d");
-const scale = 10;
+const scale = 12;
 
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
@@ -8,22 +8,24 @@ const columns = canvas.width / scale;
 let game;
 let snake;
 let score = 0;
-let speed = 90;
+let speed = 70;
+var players = [];
 
 let prevItem = document.getElementById("restart-btn");
 let newItem = document.createElement("span");
-newItem.setAttribute("id", "scoreboard");
+newItem.setAttribute("id", "score");
 newItem.innerHTML = `${score * 100} points`;
 prevItem.parentNode.insertBefore(newItem, prevItem.nextSibling); // insert after
 // newItem.parentNode.insertBefore(newItem, prevItem); // insert before
 
 // close modal
-function closeModal() {
-  document.getElementById("gameover-modal").style.transform =
-    "translateY(-100vh)";
-  document.getElementById("gameover-modal").style.transitionTimingFunction =
-    "ease";
-  document.getElementById("gameover-modal").style.transition = "transform 0.5s";
+function closeModal(modal_id) {
+  // if (modal_id === "scoreboard-modal") {
+  //   console.log("exit");
+  // }
+  document.getElementById(modal_id).style.transform = "translateY(-100vh)";
+  document.getElementById(modal_id).style.transitionTimingFunction = "ease";
+  document.getElementById(modal_id).style.transition = "transform 0.5s";
   document.getElementById("shadow").style.zIndex = -1;
   document.getElementById("shadow").style.background = "transparent";
 }
@@ -31,7 +33,7 @@ function closeModal() {
 // modal cancel button
 function cancelForm(e) {
   e.preventDefault();
-  closeModal();
+  closeModal("gameover-modal");
   // document.getElementById("gameover-modal").style.visibility = "hidden";
 }
 document.getElementById("editBtn").addEventListener("click", cancelForm);
@@ -52,7 +54,7 @@ const onSubmitForm = async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    closeModal();
+    closeModal("gameover-modal");
     console.log(response);
     window.location = "/";
   } catch (error) {
@@ -60,6 +62,60 @@ const onSubmitForm = async (e) => {
   }
 };
 document.getElementById("name-form").addEventListener("submit", onSubmitForm);
+
+document.getElementById("exit-Btn").addEventListener("click", function () {
+  closeModal("scoreboard-modal");
+});
+const topScores = document.getElementById("top-scores");
+
+// modal submit button
+const handleScoreboard = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("/scores");
+    const jsonData = await response.json();
+    console.log(jsonData);
+    players = jsonData;
+    topScores.innerText = jsonData;
+    // topScores.innerHTML();
+    // prevItem.parentNode.insertBefore(newItem, prevItem.nextSibling); // insert after
+  } catch (err) {
+    console.error(err.message);
+  }
+  document.getElementById("shadow").style.background = "black";
+  document.getElementById("shadow").style.opacity = 0.5;
+  document.getElementById("shadow").style.zIndex = 1;
+  document.getElementById("scoreboard-modal").style.zIndex = "visible";
+  document.getElementById("scoreboard-modal").style.visibility = "visible";
+  document.getElementById("scoreboard-modal").style.transform = "translateY(0)";
+
+  // console.log("open scoreboard");YYY
+
+  // window.location = "/";
+
+  // const body = {
+  //   player_name: `${nameEntry.value}`,
+  //   player_score: `${score * 100}`,
+  // };
+
+  // try {
+  //   const response = await fetch("/scores", {
+  //     method: "GET",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(body),
+  //   });
+  //   closeModal();
+  //   console.log(response);
+  //   window.location = "/";
+  // } catch (error) {
+  //   console.error(error.message);
+  // }
+};
+
+document
+  .getElementById("scoreboard")
+  .addEventListener("click", handleScoreboard);
 
 function setup() {
   snake = new Snake();

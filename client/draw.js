@@ -83,7 +83,7 @@ const handleScoreboard = async (e) => {
     for (let i = 0; i < jsonData.length; i++) {
       let newPlayer = document.createElement("div");
       newPlayer.setAttribute("class", "players");
-      newPlayer.innerHTML = `<span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player_score>${jsonData[i].player_score}</span><hr />`;
+      newPlayer.innerHTML = `<span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player_score">${jsonData[i].player_score}</span><hr />`;
       prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
     }
   } catch (err) {

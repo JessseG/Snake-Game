@@ -137,7 +137,8 @@ h2 {
 }
 
 hr {
-  margin: auto 2.5vh;
+  margin-right: 2.5vh;
+  margin-left: 2.5vh;
 }
 
 .modalTextBox {

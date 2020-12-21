@@ -136,6 +136,10 @@ h2 {
   text-align: left;
 }
 
+hr {
+  margin: auto 2.5vh;
+}
+
 .modalTextBox {
   position: inherit;
   line-height: 3.5vh;

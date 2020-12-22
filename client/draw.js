@@ -78,7 +78,7 @@ const topScores = document.getElementById("top-scores");
     // topScores.innerHTML();
     let prevPlayer = document.getElementById("top-scores");
     jsonData.sort(
-      (a, b) => parseInt(b.player_score) - parseInt(a.player_score)
+      (a, b) => parseInt(a.player_score) - parseInt(b.player_score)
     );
     for (let i = 0; i < jsonData.length; i++) {
       let newPlayer = document.createElement("div");

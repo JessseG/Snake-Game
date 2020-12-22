@@ -1,3 +1,7 @@
+html {
+  zoom: 0.9;
+}
+
 body {
   background: #bababa;
   color: rgb(48, 48, 48);
@@ -8,21 +12,24 @@ body {
 }
 
 header {
-  position: relative;
-  margin: 0 auto; /* added */
+  /* position: relative; */
+
   padding: 0;
-  width: 300px;
+  /* width: 440px; */
   /* border: 2px solid black; */
   height: auto;
-  margin-bottom: 1vh;
+  margin-bottom: 0.6vh;
+  text-align: center;
 }
 
 #bar {
-  position: inherit;
-  overflow: auto;
+  /* position: inherit; */
+  display: inline-block;
+  overflow: hidden;
   height: auto;
+  width: auto;
   /* border: 1px solid red; */
-  margin-bottom: 0vh;
+  /* margin-bottom: 0vh; */
 }
 
 h1 {
@@ -33,36 +40,43 @@ h1 {
   /* border: 1px solid red; */
 }
 
+#scoreboard-Btn {
+  /* position: relative; */
+  /* display: inline-block; */
+  /* float: left;  */
+  font-family: "Ubuntu";
+  border: 0.17vh solid rgba(9, 25, 44);
+  border-radius: 0.3vh;
+  background-color: rgb(0, 230, 142);
+  cursor: pointer;
+  margin: auto 4vh;
+  padding: 4px 5px;
+  font-size: 1.7vh;
+  font-weight: 420;
+  /* height: 4.5vh; */
+}
+
 #restart-btn {
   cursor: pointer;
-  float: left;
+  /* float: left; */
+  margin: auto 4vh;
+  color: initial;
   border-radius: 2.2px;
-  border-width: 0.14vh;
-  padding: 2.5px 6px;
+  border-width: 0.17vh;
+  padding: 4px 6px;
 }
 
 #score {
   background-image: linear-gradient(to bottom, #e4e4e4, #f7f7f7);
   border-radius: 2.2px;
   border: 0.14vh solid black;
-  padding: 2.5px 6px;
+  padding: 3.5px 6px;
   font: -webkit-small-control;
   color: initial;
   vertical-align: -0.3px;
-  float: right;
+  margin: auto 4vh;
   cursor: pointer;
-}
-
-#score {
-  background-image: linear-gradient(to bottom, #e4e4e4, #f7f7f7);
-  border-radius: 2.2px;
-  border: 0.14vh solid black;
-  padding: 2.5px 6px;
-  font: -webkit-small-control;
-  color: initial;
-  vertical-align: -0.3px;
-  float: right;
-  cursor: pointer;
+  display: inline;
 }
 
 .content {
@@ -132,7 +146,7 @@ hr {
 }
 
 .modalTextBox {
-  /* position: inherit; */
+  position: relative;
   line-height: 3.5vh;
   padding-left: 8px;
   font-size: 1.8vh;
@@ -142,15 +156,17 @@ hr {
   outline: none;
   margin: 0.5vh auto;
   margin-left: -3vh;
-  margin-right: 1vh;
+  margin-right: 0.5vh;
 }
 
 #final-score {
   display: inline-flex;
-  margin-left: 1vh;
+  margin-right: -2.7vh;
+  margin-left: 0.5vh;
   color: initial;
-  font-size: 2.4vh;
+  font-size: 2.2vh;
   font-weight: 400;
+  letter-spacing: -1px;
 }
 
 #player-name {
@@ -182,9 +198,8 @@ hr {
   /* padding: auto 1vh; */
 }
 
-#scoreboard-Btn {
+/* #scoreboard-Btn {
   position: relative;
-  /* display: inline-block; */
   font-family: "Ubuntu";
   border: 0.2vh solid rgba(9, 25, 44);
   border-radius: 0.4vh;
@@ -197,7 +212,7 @@ hr {
   font-size: 1.7vh;
   font-weight: 650;
   height: 4.5vh;
-}
+} */
 
 #cancel-Btn {
   font-family: "Ubuntu";

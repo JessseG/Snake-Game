@@ -5,10 +5,10 @@ const scale = 10;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 
-let game;
+var game;
 let snake;
 let score = 0;
-let speed = 65; // inverted
+var speed = 65; // inverted
 var players = [];
 
 let prevItem = document.getElementById("restart-btn");
@@ -124,7 +124,10 @@ const handleScoreboard = () => {
 
 document
   .getElementById("scoreboard-Btn")
-  .addEventListener("click", handleScoreboard);
+  .addEventListener("click", function () {
+    closeModal("gameover-modal");
+    handleScoreboard();
+  });
 
 function setup() {
   snake = new Snake();
@@ -174,7 +177,7 @@ function setup() {
       fruit.pickLocation();
       fruit.drawFruit();
       //
-      if (score >= 1000 && score < 2000) {
+      if (score % 300 === 0) {
         // still not working
         updateSpeed();
       }
@@ -182,7 +185,8 @@ function setup() {
   }
 
   function updateSpeed() {
-    speed -= 70;
+    speed -= 20;
+    resetter();
   }
 
   function resetter() {

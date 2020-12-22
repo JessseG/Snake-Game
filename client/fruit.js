@@ -5,8 +5,8 @@ function Fruit() {
   this.toggle = false;
 
   this.pickLocation = function () {
-    this.x = Math.floor(Math.random() * columns - 1) * scale;
-    this.y = Math.floor(Math.random() * rows - 1) * scale;
+    this.x = (Math.floor(Math.random() * columns - 1) + 1) * scale;
+    this.y = (Math.floor(Math.random() * rows - 1) + 1) * scale;
     // console.log("x: " + this.x + " y: " + this.y);
     if (
       canvas.width / 2 - scale * 2 < this.x &&

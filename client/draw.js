@@ -1,6 +1,6 @@
 const canvas = document.querySelector(".canvas");
 const ctx = canvas.getContext("2d");
-const scale = 12;
+const scale = 10;
 
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
@@ -8,7 +8,7 @@ const columns = canvas.width / scale;
 let game;
 let snake;
 let score = 0;
-let speed = 70;
+let speed = 65; // inverted
 var players = [];
 
 let prevItem = document.getElementById("restart-btn");
@@ -36,7 +36,7 @@ function cancelForm(e) {
   closeModal("gameover-modal");
   // document.getElementById("gameover-modal").style.visibility = "hidden";
 }
-document.getElementById("editBtn").addEventListener("click", cancelForm);
+document.getElementById("cancel-Btn").addEventListener("click", cancelForm);
 
 // modal submit button
 const onSubmitForm = async (e) => {
@@ -123,7 +123,7 @@ const handleScoreboard = () => {
 };
 
 document
-  .getElementById("scoreboard")
+  .getElementById("scoreboard-Btn")
   .addEventListener("click", handleScoreboard);
 
 function setup() {

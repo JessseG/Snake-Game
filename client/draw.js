@@ -55,7 +55,7 @@ const onSubmitForm = async (e) => {
       body: JSON.stringify(body),
     });
     closeModal("gameover-modal");
-    console.log(response);
+    // console.log(response);
     window.location = "/";
   } catch (error) {
     console.error(error.message);
@@ -72,11 +72,14 @@ const topScores = document.getElementById("top-scores");
   try {
     const response = await fetch("/scores");
     const jsonData = await response.json();
-    console.log(jsonData);
+    // console.log(jsonData);
     players = jsonData;
     // topScores.innerText = jsonData;
     // topScores.innerHTML();
     let prevPlayer = document.getElementById("top-scores");
+    jsonData.sort(
+      (a, b) => parseInt(b.player_score) - parseInt(a.player_score)
+    );
     for (let i = 0; i < jsonData.length; i++) {
       let newPlayer = document.createElement("div");
       newPlayer.setAttribute("class", "players");
@@ -156,7 +159,7 @@ function setup() {
 
     if (snake.gameova) {
       clearInterval(game);
-      console.log("GAME OVER");
+      // console.log("GAME OVER");
       document.getElementById("shadow").style.background = "black";
       document.getElementById("shadow").style.opacity = 0.5;
       document.getElementById("shadow").style.zIndex = 1;

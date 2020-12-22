@@ -95,7 +95,7 @@ canvas {
   border: 0.6vh solid white;
   cursor: pointer;
   display: block;
-  zoom: 1.2;
+  zoom: 1.3;
 }
 
 #gameover-modal {

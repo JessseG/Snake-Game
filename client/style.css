@@ -36,7 +36,8 @@ h1 {
   text-align: center;
   color: #222222;
   font-family: "Ubuntu";
-  margin: 10px 0px;
+  margin: 14px 0px;
+  margin-bottom: 14px;
   /* border: 1px solid red; */
 }
 
@@ -44,15 +45,15 @@ h1 {
   /* position: relative; */
   /* display: inline-block; */
   /* float: left;  */
+  color: initial;
   font-family: "Ubuntu";
-  border: 0.17vh solid rgba(9, 25, 44);
+  border: 1.15px solid black;
   border-radius: 0.3vh;
   background-color: rgb(0, 230, 142);
   cursor: pointer;
   margin: auto 4vh;
   padding: 4px 5px;
   font-size: 1.7vh;
-  font-weight: 420;
   /* height: 4.5vh; */
 }
 
@@ -69,7 +70,7 @@ h1 {
 #score {
   background-image: linear-gradient(to bottom, #e4e4e4, #f7f7f7);
   border-radius: 2.2px;
-  border: 0.14vh solid black;
+  border: 1.15px solid black;
   padding: 3.5px 6px;
   font: -webkit-small-control;
   color: initial;

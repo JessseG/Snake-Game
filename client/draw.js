@@ -115,8 +115,8 @@ document.getElementsByTagName("IMG").addEventListener("click", function () {
   // deleteScore(`${jsonData[i].player_name}`);
 });
 
-var topScores = document.getElementById("top-scores");
-var player = topScores.getElementsByTagName("IMG");
+var topPlayers = document.getElementById("top-scores");
+var player = topPlayers.getElementsByTagName("IMG");
 
 for (let k = 0; k < player.length; k++) {
   console.log(player[k].id);

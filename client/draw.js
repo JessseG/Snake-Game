@@ -102,17 +102,18 @@ const deleteScore = async (name) => {
       deleteBtn.setAttribute("width", "20");
       deleteBtn.setAttribute("height", "25");
       newPlayer.innerHTML = `<hr /><span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span>${deleteBtn}`;
-      document
-        .getElementById(`${jsonData[i].player_name}`)
-        .addEventListener("click", function () {
-          deleteScore(`${jsonData[i].player_name}`);
-        });
+
       prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
     }
   } catch (err) {
     console.error(err.message);
   }
 })();
+
+document.getElementsByTagName("img").addEventListener("click", function (e) {
+  console.log(e);
+  deleteScore(`${jsonData[i].player_name}`);
+});
 
 // modal submit button
 const handleScoreboard = () => {

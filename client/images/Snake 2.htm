@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://127.0.0.1:5500/client/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./Snake 2_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./Snake 2_files/css">
+    <title>Snake 2</title>
+  </head>
+
+  <body><header>
+    <h1>Snake 2</h1>
+    <div id="bar">
+      <button id="scoreboard-Btn">Scoreboard</button>
+      <button id="restart-btn">Restart</button><span id="score">0 points</span>
+      <!-- <span id="scoreboard">Score</span> -->
+    </div>
+  </header>
+
+  
+    <div class="content">
+      <div id="scoreboard-wrapper">
+        <canvas class="canvas" height="300" width="440"></canvas>
+        <!-- <button id="scoreboard-Btn">Scoreboard</button> -->
+      </div>
+
+      <div id="gameover-modal" style="opacity: 1; visibility: hidden; transform: translateY(-100vh); transition: transform 0.5s ease 0s;">
+        <h2>GAME OVER!</h2>
+        <hr>
+        <form id="name-form">
+          <input type="text" class="modalTextBox" placeholder="Enter Player Name" id="name-entry" required="">
+          <span id="final-score"></span>
+          <hr>
+          <!-- <button id="scoreboard-Btn">Scoreboard</button> -->
+          <div id="modal-buttons">
+            <button id="cancel-Btn">Cancel</button>
+            <button type="submit" id="submitBtn">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="scoreboard-modal" style="opacity: 1; visibility: visible; transform: translateY(-100vh); transition: transform 0.5s ease 0s;">
+        <h2>TOP SCORES</h2>
+          <!-- <span id="final-score"></span> -->
+          <div id="top-scores"></div>
+          <hr>
+          <div id="modal-buttons">
+            <button id="exit-Btn">Exit</button>
+          </div>
+        
+      </div>
+    </div>
+
+    <div id="shadow" style="z-index: -1; background: transparent; opacity: 0.5;"></div>
+    <script>
+      // const onSubmitForm = async (e) => {
+      //   e.preventDefault();
+      //   const nameEntry = document.getElementById("name-entry");
+      //  //   const nameEntry = document.getElementById("name-entry");
+      //   const body = nameEntry.value;
+
+      //   try {
+      //     const response = await fetch("http://localhost:5000/scores", {
+      //       method: "POST",
+      //       headers: { "Content-Type": "application/json" },
+      //       body: JSON.stringify(body),
+      //     });
+      //     alert(JSON.stringify(body));
+      //     console.log(response);
+      //   } catch (error) {
+      //     console.error(error.message);
+      //   }
+      // };
+      // document
+      //   .getElementById("name-form")
+      //   .addEventListener("submit", onSubmitForm);
+    </script>
+    
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+  <script type="text/javascript" src="./Snake 2_files/fruit.js"></script>
+  <script type="text/javascript" src="./Snake 2_files/snake.js"></script>
+  <script type="text/javascript" src="./Snake 2_files/draw.js"></script>
+
+</body></html>

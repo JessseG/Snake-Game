@@ -95,8 +95,12 @@ const deleteScore = async (name) => {
     );
     for (let i = 0; i < jsonData.length; i++) {
       let newPlayer = document.createElement("div");
-      let deleteBtn = `<img src="./images/delete-icon.jpg" width="20" height="25" id="${jsonData[i].player_name}"></img>`;
       newPlayer.setAttribute("class", "players");
+      let deleteBtn = document.createElement("img");
+      deleteBtn.setAttribute("id", `${jsonData[i].player_name}`);
+      deleteBtn.setAttribute("src", "./images/delete-icon.jpg");
+      deleteBtn.setAttribute("width", "20");
+      deleteBtn.setAttribute("height", "25");
       newPlayer.innerHTML = `<hr /><span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span>${deleteBtn}`;
       document
         .getElementById(`${jsonData[i].player_name}`)

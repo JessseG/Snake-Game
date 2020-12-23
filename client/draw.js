@@ -68,7 +68,7 @@ document.getElementById("exit-Btn").addEventListener("click", function () {
 });
 const topScores = document.getElementById("top-scores");
 
-const jsonData;
+var jsonData;
 
 const deleteScore = async (name) => {
   try {

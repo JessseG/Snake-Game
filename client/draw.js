@@ -110,10 +110,24 @@ const deleteScore = async (name) => {
   }
 })();
 
-document.getElementsByTagName("img").addEventListener("click", function () {
+document.getElementsByTagName("IMG").addEventListener("click", function () {
   console.log(e);
   // deleteScore(`${jsonData[i].player_name}`);
 });
+
+var topScores = document.getElementById("top-scores");
+var player = topScores.getElementsByTagName("IMG");
+
+for (let k = 0; k < player.length; k++) {
+  console.log(player[k].id);
+}
+
+var x = document.getElementById("myDIV");
+var y = x.getElementsByTagName("IMG");
+var i;
+for (i = 0; i < y.length; i++) {
+  y[i].style.backgroundColor = "red";
+}
 
 // modal submit button
 const handleScoreboard = () => {

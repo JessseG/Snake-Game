@@ -122,13 +122,6 @@ for (let k = 0; k < player.length; k++) {
   console.log(player[k].id);
 }
 
-var x = document.getElementById("myDIV");
-var y = x.getElementsByTagName("IMG");
-var i;
-for (i = 0; i < y.length; i++) {
-  y[i].style.backgroundColor = "red";
-}
-
 // modal submit button
 const handleScoreboard = () => {
   // e.preventDefault();

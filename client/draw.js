@@ -110,10 +110,10 @@ const deleteScore = async (name) => {
   }
 })();
 
-document.getElementsByTagName("IMG").addEventListener("click", function () {
-  console.log(e);
-  // deleteScore(`${jsonData[i].player_name}`);
-});
+// document.getElementsByTagName("IMG").addEventListener("click", function () {
+//   console.log(e);
+//   // deleteScore(`${jsonData[i].player_name}`);
+// });
 
 var topPlayers = document.getElementById("top-scores");
 var player = topPlayers.getElementsByTagName("IMG");

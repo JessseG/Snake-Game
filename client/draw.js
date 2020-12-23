@@ -110,9 +110,9 @@ const deleteScore = async (name) => {
   }
 })();
 
-document.getElementsByTagName("img").addEventListener("click", function (e) {
+document.getElementsByTagName("img").addEventListener("click", function () {
   console.log(e);
-  deleteScore(`${jsonData[i].player_name}`);
+  // deleteScore(`${jsonData[i].player_name}`);
 });
 
 // modal submit button

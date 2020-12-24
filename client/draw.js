@@ -94,12 +94,12 @@ const deleteScore = async (name) => {
       (a, b) => parseInt(b.player_score) - parseInt(a.player_score)
     );
     for (let i = 0; i < jsonData.length; i++) {
-      let player = document.getElementById(`player-${i + 1}`);
-      player.style.display = "block";
-      let playerName = document.getElementById(`player-${i + 1}-name`);
-      playerName.innerText = jsonData[i].player_name;
-      let playerScore = document.getElementById(`player-${i + 1}-score`);
-      playerScore.innerText = jsonData[i].player_score;
+      document.getElementById(`player-${i + 1}`).style.display = "block";
+      document.getElementById(`hr-${i + 1}`).style.display = "block";
+      document.getElementById(`player-${i + 1}-name`).innerText =
+        jsonData[i].player_name;
+      document.getElementById(`player-${i + 1}-score`).innerText =
+        jsonData[i].player_score;
       document
         .getElementById(`player-${i + 1}-delete`)
         .addEventListener("click", function (e) {

@@ -188,7 +188,9 @@ hr {
   padding: 3px;
   border-radius: 3px;
   vertical-align: -1.2vh;
-  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5vh;
 }
 
 #exit-Btn {

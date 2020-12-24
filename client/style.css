@@ -202,11 +202,12 @@ hr {
 
 .player-score {
   display: inline-block;
-  /* float: right; */
+  float: right;
   /* border: 1px solid red; */
   margin-left: 18vh;
   /* font-weight: bold; */
 }
+
 #exit-Btn {
   font-family: "Ubuntu";
   position: relative;

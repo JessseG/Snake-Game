@@ -148,7 +148,8 @@ hr {
 }
 
 .modalTextBox {
-  position: relative;
+  /* position: relative; */
+  display: inline-block;
   line-height: 3.5vh;
   padding-left: 8px;
   font-size: 1.8vh;
@@ -157,11 +158,13 @@ hr {
   border-radius: 3px;
   outline: none;
   margin: 0.5vh 2vh;
+  margin-left: 0vh;
 }
 
 #final-score {
-  display: inline-flex;
-  margin-right: -2.7vh;
+  display: inline-block;
+  /* float: right; */
+  margin-right: 1vh;
   margin-left: 0.5vh;
   color: initial;
   font-size: 2.2vh;

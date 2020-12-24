@@ -81,7 +81,7 @@ function Snake() {
       this.y < canvas.height / 2 + scale &&
       this.dy > 0
     ) {
-      console.log("x: " + this.x + " y: " + this.y);
+      // console.log("x: " + this.x + " y: " + this.y);
       return true;
     }
     // from bottom

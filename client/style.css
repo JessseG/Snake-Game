@@ -181,7 +181,7 @@ hr {
   display: inline-block;
   float: left;
   /* border: 1px solid red; */
-  margin-left: 1.5vh;
+  margin-left: 2vh;
   font-weight: bold;
 }
 
@@ -189,7 +189,7 @@ hr {
   display: inline-block;
   /* float: right; */
   /* border: 1px solid red; */
-  margin-right: 2vh;
+  margin-left: 5vh;
   /* font-weight: bold; */
 }
 

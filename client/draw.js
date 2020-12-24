@@ -104,9 +104,9 @@ const deleteScore = async (name) => {
       // newPlayer.innerHTML = `<hr /><span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span>${deleteBtn}`;
       // prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
       let playerName = document.getElementById(`player-${i + 1}-name`);
-      playerName.innerText(jsonData[i].player_name);
+      playerName.innerText = jsonData[i].player_name;
       let playerScore = document.getElementById(`player-${i + 1}-score`);
-      playerScore.innerText(jsonData[i].player_score);
+      playerScore.innerText = jsonData[i].player_score;
       document
         .getElementsByTagName(`player-${i + 1}-delete`)
         .addEventListener("click", function () {

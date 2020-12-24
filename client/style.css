@@ -185,12 +185,12 @@ hr {
   /* float: right; */
   display: inline;
   cursor: pointer;
-  border: 1.7px solid black;
+  border: 1.4px solid black;
   padding: 3px;
   border-radius: 3px;
   /* vertical-align: -1.2vh; */
   margin-top: -3px;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
   margin-left: 5vh;
 }
 

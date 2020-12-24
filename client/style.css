@@ -185,19 +185,11 @@ hr {
   font-weight: bold;
 }
 
-.player-score {
-  display: inline-block;
-  /* float: right; */
-  /* border: 1px solid red; */
-  margin-left: 18vh;
-  /* font-weight: bold; */
-}
-
 .delete-icon {
   display: inline-block;
   float: right;
   cursor: pointer;
-  border: 1.2px solid black;
+  /* border: 1.2px solid black; */
   padding: 3px;
   border-radius: 3px;
   vertical-align: 1.5px;
@@ -207,6 +199,13 @@ hr {
   margin-right: 3.5vh;
 }
 
+.player-score {
+  display: inline-block;
+  /* float: right; */
+  /* border: 1px solid red; */
+  margin-left: 18vh;
+  /* font-weight: bold; */
+}
 #exit-Btn {
   font-family: "Ubuntu";
   position: relative;

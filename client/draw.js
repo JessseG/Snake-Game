@@ -98,8 +98,9 @@ const deleteScore = async (name) => {
       document.getElementById(`hr-${i + 1}`).style.display = "block";
       document.getElementById(`player-${i + 1}-name`).innerText =
         jsonData[i].player_name;
-      document.getElementById(`player-${i + 1}-score`).innerText =
-        jsonData[i].player_score;
+      document.getElementById(
+        `player-${i + 1}-score`
+      ).innerText = `${jsonData[i].player_score} points`;
       document
         .getElementById(`player-${i + 1}-delete`)
         .addEventListener("click", function (e) {

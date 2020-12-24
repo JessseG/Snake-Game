@@ -178,16 +178,18 @@ hr {
 }
 
 .player-name {
-  /* float: left; */
+  display: inline-block;
+  float: left;
   border: 1px solid red;
-  /* margin-left: 3vh; */
+  margin-left: 0.5vh;
   font-weight: bold;
 }
 
 .player-score {
-  /* float: right; */
+  display: inline-block;
+  float: right;
   border: 1px solid red;
-  /* margin-right: 2vh; */
+  margin-right: 2vh;
   /* font-weight: bold; */
 }
 

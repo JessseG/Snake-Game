@@ -178,14 +178,14 @@ hr {
 }
 
 .player-name {
-  float: left;
+  /* float: left; */
   border: 1px solid red;
   /* margin-left: 3vh; */
   font-weight: bold;
 }
 
 .player-score {
-  float: right;
+  /* float: right; */
   border: 1px solid red;
   /* margin-right: 2vh; */
   /* font-weight: bold; */

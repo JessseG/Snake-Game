@@ -156,9 +156,7 @@ hr {
   width: 62%;
   border-radius: 3px;
   outline: none;
-  margin: 0.5vh auto;
-  margin-left: -3vh;
-  margin-right: 0.5vh;
+  margin: 0.5vh 2vh;
 }
 
 #final-score {

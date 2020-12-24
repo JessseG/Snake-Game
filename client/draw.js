@@ -93,7 +93,7 @@ const deleteScore = async (name) => {
     jsonData.sort(
       (a, b) => parseInt(b.player_score) - parseInt(a.player_score)
     );
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < jsonData.lengths; i++) {
       if (jsonData[i].player_name !== undefined) {
         let playerName = document.getElementById(`player-${i + 1}-name`);
         playerName.innerText = jsonData[i].player_name;

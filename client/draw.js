@@ -93,7 +93,7 @@ const deleteScore = async (name) => {
     jsonData.sort(
       (a, b) => parseInt(a.player_score) - parseInt(b.player_score)
     );
-    for (let i = 0; i < jsonData.length; i++) {
+    for (let i = 0; i < 6; i++) {
       // let newPlayer = document.createElement("div");
       // newPlayer.setAttribute("class", "players");
       // let deleteBtn = document.createElement("img");

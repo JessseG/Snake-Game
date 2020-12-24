@@ -178,14 +178,14 @@ hr {
 }
 
 .player-name {
-  text-align: left;
+  display: inline-flex;
   border: 1px solid red;
   margin-left: 0.5vh;
   font-weight: bold;
 }
 
 .player-score {
-  text-align: right;
+  display: inline-flex;
   border: 1px solid red;
   margin-right: 2vh;
   /* font-weight: bold; */

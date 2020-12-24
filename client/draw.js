@@ -89,38 +89,42 @@ const deleteScore = async (name) => {
     players = jsonData;
     // topScores.innerText = jsonData;
     // topScores.innerHTML();
-    let prevPlayer = document.getElementById("top-scores");
+    // let prevPlayer = document.getElementById("top-scores");
     jsonData.sort(
       (a, b) => parseInt(a.player_score) - parseInt(b.player_score)
     );
     for (let i = 0; i < jsonData.length; i++) {
-      let newPlayer = document.createElement("div");
-      newPlayer.setAttribute("class", "players");
-      let deleteBtn = document.createElement("img");
-      deleteBtn.setAttribute("id", `${jsonData[i].player_name}`);
-      deleteBtn.setAttribute("src", "./images/delete-icon.jpg");
-      deleteBtn.setAttribute("width", "20");
-      deleteBtn.setAttribute("height", "25");
-      newPlayer.innerHTML = `<hr /><span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span>${deleteBtn}`;
-
-      prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
+      // let newPlayer = document.createElement("div");
+      // newPlayer.setAttribute("class", "players");
+      // let deleteBtn = document.createElement("img");
+      // deleteBtn.setAttribute("id", `${jsonData[i].player_name}`);
+      // deleteBtn.setAttribute("src", "./images/delete-icon.jpg");
+      // deleteBtn.setAttribute("width", "20");
+      // deleteBtn.setAttribute("height", "25");
+      // newPlayer.innerHTML = `<hr /><span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span>${deleteBtn}`;
+      // prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
+      let playerName = document.getElementById(`player-${i + 1}-name`);
+      playerName.innerText(jsonData[i].player_name);
+      let playerScore = document.getElementById(`player-${i + 1}-score`);
+      playerScore.innerText(jsonData[i].player_score);
+      document
+        .getElementsByTagName(`player-${i + 1}-delete`)
+        .addEventListener("click", function () {
+          // console.log(e);
+          deleteScore(jsonData[i].player_name);
+        });
     }
   } catch (err) {
     console.error(err.message);
   }
 })();
 
-// document.getElementsByTagName("IMG").addEventListener("click", function () {
-//   console.log(e);
-//   // deleteScore(`${jsonData[i].player_name}`);
-// });
+// var topPlayers = document.getElementById("top-scores");
+// var player = topPlayers.getElementsByTagName("IMG");
 
-var topPlayers = document.getElementById("top-scores");
-var player = topPlayers.getElementsByTagName("IMG");
-
-for (let k = 0; k < player.length; k++) {
-  console.log(player[k].id);
-}
+// for (let k = 0; k < player.length; k++) {
+//   console.log(player[k].id);
+// }
 
 // modal submit button
 const handleScoreboard = () => {

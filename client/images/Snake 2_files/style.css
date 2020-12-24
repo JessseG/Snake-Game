@@ -170,16 +170,20 @@ hr {
   letter-spacing: -1px;
 }
 
-#player-name {
+.player-name {
   float: left;
   margin-left: 4vh;
   font-weight: bold;
 }
 
-#player-score {
+.player-score {
   float: right;
   margin-right: 5vh;
   /* font-weight: bold; */
+}
+
+.delete-icon {
+  float: right;
 }
 
 #exit-Btn {

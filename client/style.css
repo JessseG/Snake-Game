@@ -169,6 +169,10 @@ hr {
   letter-spacing: -1px;
 }
 
+.player {
+  margin: auto 2.5vh;
+}
+
 #player-name {
   /* float: left; */
   margin-left: 4vh;
@@ -190,8 +194,9 @@ hr {
   border-radius: 3px;
   vertical-align: 1.5px;
   margin-top: -3px;
-  margin-bottom: -8px;
+  margin-bottom: -5.5px;
   margin-left: 5vh;
+  margin-right: 0.5vh;
 }
 
 #exit-Btn {

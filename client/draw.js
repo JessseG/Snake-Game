@@ -107,6 +107,7 @@ const deleteScore = async (name) => {
           let playerID = e.target.id;
           let playerNum = playerID.substring(7, 8);
           document.getElementById(`player-${playerNum}`).remove();
+          document.getElementById(`hr-${i + 1}`).remove();
           deleteScore(jsonData[i].player_name);
         });
     }

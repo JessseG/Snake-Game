@@ -187,9 +187,9 @@ hr {
 
 .player-score {
   display: inline-block;
-  float: right;
+  /* float: right; */
   border: 1px solid red;
-  margin-right: 10vh;
+  margin-right: 5vh;
   /* font-weight: bold; */
 }
 

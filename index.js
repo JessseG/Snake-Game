@@ -68,6 +68,20 @@ app.get("/scores/:id", async (req, res) => {
   }
 });
 
+// delete a score by name
+app.delete("/scores/:name", async (req, res) => {
+  try {
+    const { name } = req.params;
+    const deleteTask = await pool.query(
+      "DELETE FROM scoreboard WHERE player_name = $1",
+      [name]
+    );
+    res.json("Playre score was deleted");
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+
 // catch-All method
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/index.html"));

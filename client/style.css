@@ -180,16 +180,16 @@ hr {
 .player-name {
   display: inline-block;
   float: left;
-  border: 1px solid red;
-  margin-left: 0.5vh;
+  /* border: 1px solid red; */
+  margin-left: 1.5vh;
   font-weight: bold;
 }
 
 .player-score {
   display: inline-block;
   /* float: right; */
-  border: 1px solid red;
-  margin-right: 5vh;
+  /* border: 1px solid red; */
+  margin-right: 2vh;
   /* font-weight: bold; */
 }
 

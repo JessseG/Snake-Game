@@ -178,7 +178,7 @@ hr {
 }
 
 .player-name {
-  display: block;
+  display: inline-block;
   float: left;
   border: 1px solid red;
   margin-left: 0.5vh;
@@ -186,7 +186,7 @@ hr {
 }
 
 .player-score {
-  display: block;
+  display: inline-block;
   float: right;
   border: 1px solid red;
   margin-right: 2vh;

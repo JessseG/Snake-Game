@@ -179,6 +179,7 @@ hr {
 
 .player-name {
   display: inline-flex;
+  float: left;
   border: 1px solid red;
   margin-left: 0.5vh;
   font-weight: bold;
@@ -186,6 +187,7 @@ hr {
 
 .player-score {
   display: inline-flex;
+  float: right;
   border: 1px solid red;
   margin-right: 2vh;
   /* font-weight: bold; */

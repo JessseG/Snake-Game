@@ -189,8 +189,8 @@ hr {
   padding: 3px;
   border-radius: 3px;
   /* vertical-align: -1.2vh; */
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: -3px;
+  margin-bottom: -3px;
   margin-left: 5vh;
 }
 

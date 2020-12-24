@@ -141,6 +141,8 @@ h2 {
 }
 
 hr {
+  margin-top: 0;
+  margin-bottom: 0;
   margin-right: 2.5vh;
   margin-left: 2.5vh;
 }
@@ -170,7 +172,8 @@ hr {
 }
 
 .player {
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
   border: 1px solid red;
 }
 

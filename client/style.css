@@ -174,12 +174,13 @@ hr {
 .player {
   margin-top: 0;
   margin-bottom: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #player-name {
   display: inline-block;
   float: left;
+  border: 1px solid red;
   /* margin-left: 3vh; */
   font-weight: bold;
 }
@@ -187,6 +188,7 @@ hr {
 #player-score {
   display: inline-block;
   float: right;
+  border: 1px solid red;
   margin-right: 2vh;
   /* font-weight: bold; */
 }
@@ -201,7 +203,7 @@ hr {
   vertical-align: 1.5px;
   margin-top: -3px;
   margin-bottom: -3px;
-  margin-left: 5vh;
+  margin-left: 3.5vh;
   margin-right: 3.5vh;
 }
 

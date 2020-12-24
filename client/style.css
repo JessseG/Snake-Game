@@ -174,14 +174,16 @@ hr {
 } */
 
 #player-name {
-  /* float: left; */
-  margin-left: 4vh;
+  display: inline-block;
+  float: left;
+  margin-left: 3vh;
   font-weight: bold;
 }
 
 #player-score {
-  /* float: right; */
-  margin-right: 5vh;
+  display: inline-block;
+  float: right;
+  margin-right: 2vh;
   /* font-weight: bold; */
 }
 

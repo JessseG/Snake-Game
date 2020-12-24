@@ -91,7 +91,7 @@ const deleteScore = async (name) => {
     // topScores.innerHTML();
     // let prevPlayer = document.getElementById("top-scores");
     jsonData.sort(
-      (a, b) => parseInt(a.player_score) - parseInt(b.player_score)
+      (a, b) => parseInt(b.player_score) - parseInt(a.player_score)
     );
     for (let i = 0; i < 6; i++) {
       // let newPlayer = document.createElement("div");

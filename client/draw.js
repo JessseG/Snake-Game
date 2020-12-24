@@ -94,17 +94,8 @@ const deleteScore = async (name) => {
       (a, b) => parseInt(b.player_score) - parseInt(a.player_score)
     );
     for (let i = 0; i < 6; i++) {
-      // let newPlayer = document.createElement("div");
-      // newPlayer.setAttribute("class", "players");
-      // let deleteBtn = document.createElement("img");
-      // deleteBtn.setAttribute("id", `${jsonData[i].player_name}`);
-      // deleteBtn.setAttribute("src", "./images/delete-icon.jpg");
-      // deleteBtn.setAttribute("width", "20");
-      // deleteBtn.setAttribute("height", "25");
-      // newPlayer.innerHTML = `<hr /><span id="player-name">${jsonData[i].player_name}</span>&nbsp;<span id="player-score">${jsonData[i].player_score} points</span>${deleteBtn}`;
-      // prevPlayer.parentNode.insertBefore(newPlayer, prevPlayer.nextSibling); // insert after
       let playerName = document.getElementById(`player-${i + 1}-name`);
-      if (playerName !== undefined) {
+      if (playerName.innerText !== undefined) {
         playerName.innerText = jsonData[i].player_name;
         let playerScore = document.getElementById(`player-${i + 1}-score`);
         playerScore.innerText = jsonData[i].player_score;

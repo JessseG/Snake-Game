@@ -169,9 +169,9 @@ hr {
   letter-spacing: -1px;
 }
 
-.player {
+/* .player {
   margin: auto 2.5vh;
-}
+} */
 
 #player-name {
   /* float: left; */
@@ -196,7 +196,7 @@ hr {
   margin-top: -3px;
   margin-bottom: -5.5px;
   margin-left: 5vh;
-  margin-right: 0.5vh;
+  margin-right: 3.5vh;
 }
 
 #exit-Btn {

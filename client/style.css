@@ -172,6 +172,7 @@ hr {
 .player {
   /* margin: auto 2.5vh; */
   border: 1px solid red;
+  height: auto;
 }
 
 #player-name {

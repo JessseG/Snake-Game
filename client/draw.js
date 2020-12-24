@@ -94,18 +94,16 @@ const deleteScore = async (name) => {
       (a, b) => parseInt(b.player_score) - parseInt(a.player_score)
     );
     for (let i = 0; i < jsonData.lengths; i++) {
-      if (jsonData[i].player_name !== undefined) {
-        let playerName = document.getElementById(`player-${i + 1}-name`);
-        playerName.innerText = jsonData[i].player_name;
-        let playerScore = document.getElementById(`player-${i + 1}-score`);
-        playerScore.innerText = jsonData[i].player_score;
-        document
-          .getElementById(`player-${i + 1}-delete`)
-          .addEventListener("click", function () {
-            // console.log(e);
-            deleteScore(jsonData[i].player_name);
-          });
-      }
+      let playerName = document.getElementById(`player-${i + 1}-name`);
+      playerName.innerText = jsonData[i].player_name;
+      let playerScore = document.getElementById(`player-${i + 1}-score`);
+      playerScore.innerText = jsonData[i].player_score;
+      document
+        .getElementById(`player-${i + 1}-delete`)
+        .addEventListener("click", function () {
+          // console.log(e);
+          deleteScore(jsonData[i].player_name);
+        });
     }
   } catch (err) {
     console.error(err.message);

@@ -182,11 +182,6 @@ hr {
   /* font-weight: bold; */
 }
 
-.delete-icon {
-  float: right;
-  cursor: pointer;
-}
-
 #exit-Btn {
   font-family: "Ubuntu";
   position: relative;

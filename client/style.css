@@ -13,7 +13,6 @@ body {
 
 header {
   /* position: relative; */
-
   padding: 0;
   /* width: 440px; */
   /* border: 2px solid black; */
@@ -180,6 +179,11 @@ hr {
   float: right;
   margin-right: 5vh;
   /* font-weight: bold; */
+}
+
+.delete-icon {
+  float: right;
+  cursor: pointer;
 }
 
 #exit-Btn {
